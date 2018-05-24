@@ -8,7 +8,7 @@ These instructions will help you have base knownledge about PUG/SCSS. Find the w
 
 ### Prerequisites
 
-* [Node js](https://nodejs.org/en/) and [npmm](https://www.npmjs.com/get-npm) lastest version
+* [Node js](https://nodejs.org/en/) and [npm](https://www.npmjs.com/get-npm) lastest version
 * [Gulp](https://gulpjs.com/)
 * [Bower](https://bower.io/)
 
