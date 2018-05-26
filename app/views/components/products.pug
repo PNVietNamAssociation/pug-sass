@@ -1,0 +1,14 @@
+include ../mixins/thumnail.pug
+
+-
+  var profiles = [
+    {'id': 1, 'name': 'hero 1', 'image': 'images/image-default.jpeg' , 'age': '2000', 'price': '2 millions'},
+    {'id': 2, 'name': 'hero 2', 'image': 'images/image-default.jpeg' , 'age': '200', 'price': '3 millions'},
+    {'id': 3, 'name': 'hero 3', 'image': 'images/image-default.jpeg' , 'age': '4000', 'price': '5 millions'},
+    {'id': 4, 'name': 'hero 4', 'image': 'images/image-default.jpeg' , 'age': '32000', 'price': '6 millions'},
+    {'id': 5, 'name': 'hero 5', 'image': 'images/image-default.jpeg' , 'age': '2000', 'price': '3 millions'}
+  ];
+
+each profile in profiles
+  .col-sm-6.col-md-4
+    +thumnail(profile)

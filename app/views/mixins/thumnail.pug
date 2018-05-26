@@ -1,0 +1,11 @@
+mixin thumnail(objItem)
+  .thumbnail
+    img(src=objItem.image alt='image').thumbnail-image
+    .thumbnail-caption
+      h3.thumbnail-name= objItem.name
+      p.thumbnail-price= objItem.price
+      p more details
+      | more details
+      .btn-group
+        a.btn.btn-primary(href='#' role='button') Show more
+        a.btn.btn-default(href='#' role='button') Hide
