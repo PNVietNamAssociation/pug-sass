@@ -2,3 +2,5 @@ node_modules
 package-lock.json
 dist
 bower_components
+app/vendors/bootstrap-sass/
+app/vendors/jquery

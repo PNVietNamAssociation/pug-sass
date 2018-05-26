@@ -18,13 +18,9 @@
     "gulp-cache": "^0.4.6",
     "gulp-concat": "^2.6.1",
     "gulp-imagemin": "^3.2.0",
-    "gulp-jshint": "^2.0.4",
     "gulp-pug": "^3.3.0",
     "gulp-ruby-sass": "^2.1.1",
     "gulp-sass": "^3.1.0",
-    "gulp-uglify": "^2.1.2",
-    "gulp-useref": "^3.1.2",
-    "jshint": "^2.9.4",
     "run-sequence": "^1.2.2"
   }
 }
