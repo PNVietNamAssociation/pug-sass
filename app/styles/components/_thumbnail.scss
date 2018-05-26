@@ -1,0 +1,18 @@
+.thumbnail {
+  padding: $padding-small;
+
+  &-image {
+    @include border-radius(5px);
+  }
+
+  &-caption {
+    padding: $padding-medium;
+    @extend %layout;
+  }
+
+  &-name, &-price {
+    font-weight: 500;
+    color: $midnight-blue-dark-10;
+    text-transform: uppercase;
+  }
+}

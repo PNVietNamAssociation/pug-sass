@@ -1,0 +1,19 @@
+// ========== COLOR VARIABLE ==========
+// Color name
+$midnight-blue: #036;
+$pale-sky: #6b717f;
+$blue-light: #ADD8E6;
+
+// Color name transparent
+$midnight-blue-dark-10: darken( $midnight-blue, 10% );
+$midnight-blue-light-10: lighten( $midnight-blue, 10% );
+
+// Color apply for specific area in app
+$layout-theme: $midnight-blue-light-10;
+$page-title: $midnight-blue;
+
+
+// ========= METRICS VARIABLE ===========
+$padding-small: 5px;
+$padding-medium: 10px;
+$padding-large: 15px;
