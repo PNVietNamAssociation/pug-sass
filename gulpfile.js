@@ -2,14 +2,10 @@ var gulp = require("gulp");
 var pug = require("gulp-pug");
 var sass = require("gulp-sass");
 var browserSync = require("browser-sync").create();
-var uglify = require("gulp-uglify");
-var gulpIf = require("gulp-if");
 var imagemin = require("gulp-imagemin");
 var cache = require("gulp-cache");
 var del = require("del");
 var runSequence = require("run-sequence");
-var concat = require("gulp-concat");
-var jshint = require("gulp-jshint");
 
 // start browserSync server
 gulp.task("browserSync", function() {
@@ -23,7 +19,7 @@ gulp.task("browserSync", function() {
 // combine pug
 gulp.task("pug", function() {
   return gulp
-    .src("app/components/*.pug")
+    .src("app/views/*.pug")
     .pipe(pug())
     .pipe(gulp.dest("dist"))
     .pipe(
@@ -36,34 +32,9 @@ gulp.task("pug", function() {
 // compile sass
 gulp.task("sass", function() {
   return gulp
-    .src("app/scss/**/*.scss")
+    .src("app/styles/**/*.scss")
     .pipe(sass())
-    .pipe(gulp.dest("dist"))
-    .pipe(
-      browserSync.reload({
-        stream: true
-      })
-    );
-});
-
-//combine js
-gulp.task("js", function() {
-  return gulp
-    .src("app/js/*.js")
-    .pipe(concat("main.min.js"))
-    .pipe(gulp.dest("dist"))
-    .pipe(
-      browserSync.reload({
-        stream: true
-      })
-    );
-});
-
-// combine json file
-gulp.task("json", function() {
-  return gulp
-    .src("app/js/*.json")
-    .pipe(gulp.dest("dist"))
+    .pipe(gulp.dest("dist/styles"))
     .pipe(
       browserSync.reload({
         stream: true
@@ -72,25 +43,15 @@ gulp.task("json", function() {
 });
 
 // wathcher
-gulp.task("watch", ["browserSync", "sass", "js", "pug", "json"], function() {
-  gulp.watch("app/scss/**/*.scss", ["sass"], browserSync.reload);
+gulp.task("watch", ["browserSync", "sass", "pug"], function() {
+  gulp.watch("app/styles/**/*.scss", ["sass"], browserSync.reload);
   gulp.watch("app/**/*.pug", ["pug"], browserSync.reload);
-  gulp.watch("app/js/*.js", ["js"], browserSync.reload);
-  gulp.watch("app/js/*.json", ["json"], browserSync.reload);
-});
-
-// jshint
-gulp.task("lint", function() {
-  return gulp
-    .src("app/js/*.js")
-    .pipe(jshint())
-    .pipe(jshint.reporter("default"));
 });
 
 // Optimize images
 gulp.task("images", function() {
   return gulp
-    .src("app/vendor/images/**/*.+(png|jpg|jpeg|gif|svg)")
+    .src("app/vendors/images/*.+(png|jpg|jpeg|gif|svg)")
     .pipe(
       cache(
         imagemin({
