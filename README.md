@@ -1,10 +1,10 @@
 # Alumni Talk 1: Introduction about PUG/SCSS
 
-This repo create a code skeleton for apply PUG/SCSS into a project
+A starter template using pug and sass
 
 ## Getting Started
 
-These instructions will help you have base knownledge about PUG/SCSS. Find the way to create good folder structure and apply some functions for PUG/SCSS
+You can use this skeleton as a starting point on writing your code in pug and scss or sass instead of semantic html/css.
 
 ### Prerequisites
 
@@ -15,29 +15,28 @@ These instructions will help you have base knownledge about PUG/SCSS. Find the w
 ### Target
 
 * Understand what is PUG/SCSS
-* How to make clear and logic folder structure for PUG/SCSS
+* How to make clear and logic folder structure with PUG/SCSS
 * Apply some functional of PUG/SCSS (mixin, variable, nested rules...)
 
 ### Installing
 
 Clone repo at [github](https://github.com/PNVietNamAssociation/pug-sass/)
 
-Install packages
+Install packages via npm
 
 ```
 npm install
+```
+
+Using bower to install bootstrap-sass
+```
+bower install
 ```
 
 Run and build app run to browser
 
 ```
 gulp
-```
-
-## Deployment
-
-```
-...
 ```
 
 ## Authors
