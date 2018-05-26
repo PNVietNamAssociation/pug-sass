@@ -1,0 +1,21 @@
+{
+  "name": "pug-sass",
+  "description": "This repo representation for a skeleton of pug and sass",
+  "main": "gulpfile.js",
+  "authors": [
+    "Dien Vo and Vuong Nguyen"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/PNVietNamAssociation/pug-sass",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "bootstrap-sass": "^3.3.7"
+  }
+}
